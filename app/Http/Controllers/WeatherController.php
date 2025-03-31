@@ -22,6 +22,9 @@ class WeatherController extends Controller
         $apiKey = env('OPENWEATHER_API_KEY');
         $url = "https://api.openweathermap.org/data/2.5/weather?q={$city}&units=metric&appid={$apiKey}";
 
+        
+
+
         try {
             $response = Http::get($url);
             if ($response->successful()) {
